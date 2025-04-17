@@ -103,7 +103,7 @@ docker stop csvserver
 docker rm csvserver
 ```
 
-## Step 6: Create docker-compose.yaml and csvserver.env for Docker Compose Setup
+## Step 6: Created docker-compose.yaml and csvserver.env for Docker Compose Setup
 
 To run the container using Docker Compose in the background, run below command:
 ```bash
@@ -113,3 +113,22 @@ To stop the container run -
 ```bash
 docker-compose down
 ```
+
+## Step 7: Add Prometheus Monitoring
+
+### Add Prometheus service to docker-compose.yaml
+### Create prometheus.yml in your project directory
+### Start containers with Docker Compose:
+```bash
+docker-compose up -d
+```
+### Open Prometheus in browser:
+Visit: http://localhost:9090
+
+### Query Prometheus:
+
+In the Prometheus UI:
+
+- Type `csvserver_records` in the query box
+- Click on **Execute**
+- Switch to the **Graph** tab to view the metrics
