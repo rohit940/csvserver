@@ -94,11 +94,22 @@ You should see the data from `inputFile` and a welcome note with an **orange** b
 
 ---
 
-## Cleanup
+### Cleanup
 
 To stop and remove the container:
 
 ```bash
 docker stop csvserver
 docker rm csvserver
+```
+
+## Step 6: Create docker-compose.yaml and csvserver.env for Docker Compose Setup
+
+To run the container using Docker Compose in the background, run below command:
+```bash
+docker-compose up -d
+```
+To stop the container run -
+```bash
+docker-compose down
 ```
